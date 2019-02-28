@@ -31,8 +31,8 @@ std::pair<int, int> partition_3way(std::vector<int>& input, int l, int r) {
         if (input[i] == input[pivot]) {
             k++; std::swap(input[i], input[k]);
         } else if (input[i] < input[pivot]) {
-            j++; std::swap(input[i], input[j]);
             k++; std::swap(input[i], input[k]);
+            j++; std::swap(input[k], input[j]);
         }
 
         i++;
